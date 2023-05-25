@@ -1,3 +1,5 @@
+const projectData = [];
+
 const express = require("express");
 
 // Start up an instance of app
@@ -26,4 +28,27 @@ const server = app.listen(port, listening);
 // Callback function to debug the server
 function listening() {
   console.log(`Weather journal server on localhost: ${port}`);
+}
+
+// Initialize all route with a callback function
+
+// Callback function to complete GET '/all'
+app.get("/all", sendData);
+
+function sendData(request, response) {
+  response.send(projectData);
+}
+
+// Post Route
+app.post("/temperature", updateData);
+
+function updateData(request, response) {
+  const data = {
+    temp: request.body.temp,
+    date: request.body.date,
+    content: request.body.content,
+  };
+  projectData.push(data);
+  response.send("ok");
+  console.log(data);
 }
