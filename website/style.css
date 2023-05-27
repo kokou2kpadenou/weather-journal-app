@@ -1,0 +1,218 @@
+:root {
+    --color0: #f5f5f5;
+    --color1: #333333;
+    --color2: #ffffff;
+    --color3: #efefef;
+    --color4: #007bff;
+    --color5: #222222;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--color0);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-columns: 1fr;
+    height: 100%;
+    background: var(--color1);
+    color: var(--color2);
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    padding: 1rem;
+}
+
+.entry {
+    background-color: var(--color3);
+    color: var(--color5);
+    padding: 1rem;
+}
+
+#entryHolder {
+    height: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "a b"
+        "c c";
+    grid-gap: 0.5rem;
+}
+
+#date {
+    grid-area: a;
+}
+
+#temp {
+    grid-area: b;
+}
+
+#content {
+    grid-area: c;
+}
+
+.headline {
+    background-color: var(--color5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+.title {
+    text-decoration: underline;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+    display: block;
+    font-size: 27px;
+}
+
+.input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: var(--color2);
+    color: var(--color5);
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+}
+
+.button {
+    width: 100%;
+    height: 60px;
+    background-color: var(--color4);
+    color: var(--color2);
+    font-size: 26px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.button:disabled {
+    opacity: 0.4;
+}
+
+.textarea {
+    background-color: var(--color2);
+    color: var(--color5);
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    width: 100%;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: var(--color2);
+    font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--color2);
+    font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--color2);
+    font-family: "Oswald", sans-serif;
+}
+
+/* icones */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+/* Dialog */
+.dialog {
+    padding: 0;
+}
+
+.dialog__title {
+    font-size: 1.5rem;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.dialog__content {
+    width: 200px;
+    padding: 1rem;
+
+}
+
+@media (min-width: 767px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #app {
+        width: 70vw;
+        height: auto;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+
+        grid-template-areas:
+            "a b"
+            "a c"
+            "a d";
+    }
+    .headline {
+        grid-area: a;
+        align-items: flex-end;
+        text-align: left;
+        font-size: 3rem;
+    }
+    .zip {
+        grid-area: b;
+    }
+    .feelings {
+        grid-area: c;
+    }
+    .entry {
+        grid-area: d;
+    }
+}
+
+@media (min-width: 1024px) {
+    #app {
+        width: 992px;
+        grid-template-columns: 250px 1fr;
+    }
+
+    .headline {
+        font-size: 4rem;
+    }
+}
