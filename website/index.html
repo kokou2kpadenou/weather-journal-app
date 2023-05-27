@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Journal</title>
+    <meta name="description"
+        content="The Weather Journal project is a simple web application that allows users to retrieve weather data for a specific location and keep a journal of their weather-related thoughts or observations. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon96x96.png" sizes="96x96">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="holder headline">Weather Journal App</div>
+        <div class="holder zip">
+            <label for="zip">Enter Zipcode here</label>
+            <input type="text" id="zip" class="input" placeholder="enter zip code here">
+        </div>
+        <div class="holder feel">
+            <label for="feelings">How are you feeling today?</label>
+            <textarea class="myInput textarea" id="feelings" placeholder="Enter your feelings here" rows="5"
+                cols="50"></textarea>
+            <button id="generate" class="button" type="submit" disabled>Generate</button>
+        </div>
+        <div class="holder entry">
+            <div class="title">Most Recent Entry</div>
+            <div id="entryHolder">
+                <div id="date"></div>
+                <div id="temp"></div>
+                <div id="content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progressing dialog -->
+    <dialog id="processing" class="dialog">
+        <div class="dialog__title">Processing...</div>
+        <div class="dialog__content">
+            <p>Please wait while the data is processed</p>
+        </div>
+    </dialog>
+
+    <!-- Error display dialog -->
+    <dialog id="dialog-err" class="dialog">
+        <div class="dialog__title">Error:</div>
+        <div class="dialog__content">
+            <p id="dialog-err-msg"></p>
+            <form method="dialog">
+                <button>OK</button>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
