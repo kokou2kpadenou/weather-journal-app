@@ -1,4 +1,4 @@
-const projectData = [];
+let  projectData = {};
 
 const express = require("express");
 
@@ -43,12 +43,14 @@ function sendData(request, response) {
 app.post("/temperature", updateData);
 
 function updateData(request, response) {
-  const data = {
+
+  projectData = {
     temp: request.body.temp,
     date: request.body.date,
     content: request.body.content,
   };
-  projectData.push(data);
+
   response.send("ok");
+
   console.log(data);
 }
