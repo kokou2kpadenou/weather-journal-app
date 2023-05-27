@@ -51,6 +51,4 @@ function updateData(request, response) {
   };
 
   response.send(projectData);
-
-  console.log(data);
 }
