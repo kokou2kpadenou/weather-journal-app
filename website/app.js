@@ -60,10 +60,9 @@ const postData = async (url = "", data = {}) => {
     body: JSON.stringify(data),
   });
 
-  // TODO: Check if everything is correct here.
   try {
-    // const newData = await response.json();
-    return response;
+    const newData = await response.json();
+    return newData;
   } catch (error) {
     console.log("error", error);
   }
