@@ -50,7 +50,7 @@ function updateData(request, response) {
     content: request.body.content,
   };
 
-  response.send("ok");
+  response.send(projectData);
 
   console.log(data);
 }
