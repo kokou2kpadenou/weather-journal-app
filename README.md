@@ -5,6 +5,7 @@
 
 * [Summary](#summary)
 * [Project description](#project-description)
+* [Screenshots](#screenshots)
 * [Usage](#usage)
 * [Demo](#demo)
 * [Deployment](#deployment)
@@ -24,6 +25,27 @@ This project requires you to create an asynchronous web app that uses Web API an
 The Weather Journal project is a simple web application that allows users to retrieve weather data for a specific location and keep a journal of their weather-related thoughts or observations. It typically involves integrating with a weather API to fetch real-time weather data and providing a user interface for inputting journal entries.
 
 The Weather Journal project combines weather data retrieval, user input handling, and data storage to create a simple weather journaling experience. It provides users with a way to reflect on their local weather conditions and capture their thoughts and experiences associated with the weather.
+
+[Back to top](#table-of-contents)
+
+## Screenshots
+
+Here are two screenshots showcasing the project's user interface on both mobile and desktop devices:
+
+### Mobile View
+
+![Mobile](/images/mobile.png)
+
+The mobile view provides a responsive and optimized layout for smaller screens, ensuring a seamless user experience on smartphones and tablets.
+
+### Desktop View
+
+![Desktop](/images/desktop.png)
+
+The desktop view offers a wider screen layout, taking advantage of the additional space to display more content and provide enhanced functionality.
+
+These screenshots provide a glimpse of how the project's user interface is designed and how it adapts to different screen sizes. Please note that these screenshots are for illustrative purposes and may not reflect the latest version or actual content of the project.
+
 
 [Back to top](#table-of-contents)
 
